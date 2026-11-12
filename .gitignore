@@ -19,6 +19,9 @@ mlflow.db
 # Generated training artifacts
 artifacts/
 
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
 # Data files
 data/
 *.csv
