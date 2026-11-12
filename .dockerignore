@@ -1,0 +1,43 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Git
+.git/
+.gitignore
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# Training data and MLflow history
+data/
+mlruns/
+artifacts/
+
+# Development files
+notebooks/
+.vscode/
+.idea/
+
+# Test and coverage output
+.pytest_cache/
+htmlcov/
+.coverage
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Archives and logs
+*.zip
+*.log
