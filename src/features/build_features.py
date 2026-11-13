@@ -52,7 +52,7 @@ def build_features(df: pd.DataFrame, target_col: str = "Churn") -> pd.DataFrame:
 
     # === STEP 1: Identify Feature Types ===
     # Find categorical columns (object dtype) excluding the target variable
-    obj_cols = [c for c in df.select_dtypes(include=["object"]).columns if c != target_col]
+    obj_cols = [c for c in df.select_dtypes(include=["object", "str"]).columns if c != target_col]
     numeric_cols = df.select_dtypes(include=["int64", "float64"]).columns.tolist()
     
     print(f"   📊 Found {len(obj_cols)} categorical and {len(numeric_cols)} numeric columns")

@@ -178,7 +178,7 @@ def _validate_input(customer: dict) -> pd.DataFrame:
     )
 
     # Normalize string values.
-    for column in df.select_dtypes(include=["object"]).columns:
+    for column in df.select_dtypes(include=["object", "str"]).columns:
         df[column] = df[column].astype("string").str.strip()
 
     # Validate and convert numeric fields.
