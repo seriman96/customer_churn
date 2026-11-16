@@ -209,7 +209,7 @@ def main(args):
         # ESSENTIAL: Log model in MLflow's standard format for serving
         mlflow.xgboost.log_model(
             xgb_model=model,
-            artifact_path="model" # This creates a 'model/' folder in MLflow run artifacts
+            name="model"  # This creates a 'model/' folder in MLflow run artifacts
         )
         print("✅ Model saved to MLflow for serving pipeline")
 
@@ -240,8 +240,5 @@ if __name__ == "__main__":
 '''
 # Use this below to run the pipeline:
 
-python scripts/run_pipeline.py \                                            
-    --input data/raw/Telco-Customer-Churn.csv \
-    --target Churn
-
+python scripts/run_pipeline.py --input data/raw/Telco-Customer-Churn.csv --target Churn
 '''
